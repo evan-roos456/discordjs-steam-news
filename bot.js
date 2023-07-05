@@ -1,9 +1,9 @@
 // Import required modules
 const { Client, GatewayIntentBits, SlashCommandBuilder, Routes, REST, EmbedBuilder, PermissionFlagsBits } = require("discord.js");
-const { token, clientId, clientSecret, applicationId, publicKey, dbPath } = require("./config.json");
+const { token, clientId, clientSecret, publicKey } = require("./config.json");
 const fetch = require('node-fetch');
 const appid = require('appid');
-const { JsonDB, Config } = require("node-json-db");
+// const { JsonDB, Config } = require("node-json-db");
 const fs = require('fs');
 
 /*
@@ -14,7 +14,7 @@ const fs = require('fs');
  */
 
 // Get the saved channels with jsondb
-const savedChannels = new JsonDB(new Config(dbPath, true, true, "."))
+// const savedChannels = new JsonDB(new Config(dbPath, true, true, "."))
 
 // initiate the discord client with proper config
 const client = new Client({ intents: [
@@ -24,7 +24,7 @@ const client = new Client({ intents: [
 
 // Create the attach-steam-news command
 // it is in this dumb format so that vs code can collapse it
-const commands = new SlashCommandBuilder()
+const command = new SlashCommandBuilder()
   .setName("attach-steam-news").setDescription("Attaches the stem news to the currents server.")
   .addNumberOption(option=>{
       return option.setName("appid").setDescription("The app id to listen for events.").setRequired(true);
@@ -74,7 +74,7 @@ client.on("interactionCreate", async interaction => {
     // If it is not reffering to the steam news command, ignore it
     if(!interaction.isChatInputCommand()) return;
     const baseEvent = interaction.guildId + "/" + interaction.channelIdS
-    if(interaction.commandName !== commands[0].name) return
+    if(interaction.commandName !== command.name) return
   
     // send a defer reply so that discord doesn't fail the bot during the setup
     interaction.deferReply({ ephemeral: true });
