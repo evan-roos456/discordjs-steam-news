@@ -1,0 +1,7 @@
+{
+    "token": "Your.Bot.Token",
+    "clientId": "YourClientId",
+    "clientSecret": "Your-ClientSecret",
+    "applicationId": "YourAppId",
+    "publicKey": "YourPublicKey"
+}
