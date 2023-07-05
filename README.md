@@ -11,7 +11,7 @@ After naming your application, you will be taken to its page where you can updat
 
 ### Filling out config.json
 
-Copy the app ID and public key, and paste them into the `config.json` file.
+Copy the public key, and paste them it into the `config.json` file.
 
 Click on the "Bot" button in the sidebar. Here, you can change your bot's name and icon.
 
