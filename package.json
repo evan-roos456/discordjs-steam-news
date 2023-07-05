@@ -1,0 +1,21 @@
+{
+  "name": "steam-new-bot",
+  "version": "1.0.0",
+  "description": "discord.js steam news bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "evan_roos456",
+  "license": "MIT",
+  "dependencies": {
+    "appid": "^1.0.3",
+    "discord.js": "^14.11.0",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^2.6.11",
+    "node-json-db": "^2.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
+}
