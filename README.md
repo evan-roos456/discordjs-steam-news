@@ -1,2 +1,2 @@
-# discordjs-steam-news
-A discordjs news bot that sends out steam news.
+# discord steam news
+A simple node.js news bot that sends out steam news.
