@@ -1,6 +1,17 @@
 
 # discord steam news
 A simple node.js news bot that sends out steam news.
+### Roadmap:
+
+
+| Status | Description
+| :---: | :--- |
+| done        | support all steam games |
+| started     | store events in a json file |
+| not started | get a nodejs server to run the bot |
+| not started | add DM suport |
+| not started | add support for other platforms |
+
 ## Create a discord bot
 
 ### Making the application
